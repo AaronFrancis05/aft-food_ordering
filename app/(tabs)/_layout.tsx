@@ -5,10 +5,10 @@ import {images} from "@/lib/constants";
 import {TabBarIconProps} from "@/type";
 import cn from "clsx"
 export default function TabsLayout() {
-    const isSignedIn=false;
-    if(!isSignedIn){
-        return <Redirect href={"/sign-in"}/>
-    }
+    // const isSignedIn=false;
+    // if(!isSignedIn){
+    //     return <Redirect href={"/sign-in"}/>
+    // }
     const TabIcon = ({title,icon,focused}:TabBarIconProps) => {
         return (
             <View className={"tab-icon"}>
