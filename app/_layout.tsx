@@ -2,6 +2,7 @@ import {SplashScreen, Stack} from "expo-router";
 import "@/global.css";
 import {useFonts} from "expo-font";
 import {useEffect} from "react";
+import GlobalProvider from "@/lib/UseGlobalState";
 export default function RootLayout() {
 
   const [fontsLoaded,error]=useFonts({
@@ -10,10 +11,13 @@ export default function RootLayout() {
     "Quicksand-Regular": require("../assets/fonts/Quicksand-Regular.ttf"),
     "Quicksand-SemiBold": require("../assets/fonts/Quicksand-SemiBold.ttf"),
   })
-  console.log(fontsLoaded,error);
+  // console.log(fontsLoaded,error);
   useEffect(()=>{
     if(error) throw error;
     if(fontsLoaded) SplashScreen.hideAsync();
   },[fontsLoaded,error])
-  return <Stack screenOptions={{headerShown:false}} />;
+  return <GlobalProvider>
+            <Stack screenOptions={{headerShown:false}}/>
+        </GlobalProvider>
+
 }

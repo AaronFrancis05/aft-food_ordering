@@ -4,11 +4,10 @@ import {Tabs,Redirect} from "expo-router";
 import {images} from "@/lib/constants";
 import {TabBarIconProps} from "@/type";
 import cn from "clsx"
+import {useGlobalContext} from "@/lib/UseGlobalState";
 export default function TabsLayout() {
-    // const isSignedIn=false;
-    // if(!isSignedIn){
-    //     return <Redirect href={"/sign-in"}/>
-    // }
+    const {isLoading,user,isLoggedIn} = useGlobalContext();
+    if(!isLoggedIn && !user){return <Redirect href={"/sign-in"} />}
     const TabIcon = ({title,icon,focused}:TabBarIconProps) => {
         return (
             <View className={"tab-icon"}>

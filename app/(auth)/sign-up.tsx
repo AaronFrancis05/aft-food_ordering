@@ -22,9 +22,9 @@ const SignUp = () => {
             alert("User created successfully");
             setIsLoading(false);
             router.replace("/");
-        }catch (error) {
-            alert(error as string);
-            console.log(error)
+        }catch (e: any) {
+            console.log(e);
+            throw new Error(e.message);
         }finally {
             setUser({
                 name:"",

@@ -1,19 +1,19 @@
 {
   "expo": {
-    "name": "aft-food_ordering",
-    "slug": "aft-food_ordering",
+    "name": "foodie",
+    "slug": "foodie",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "aftfoodordering",
+    "scheme": "foodie",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.aft.foodordering"
+      "bundleIdentifier": "com.aft.foodie"
     },
     "android": {
-      "package": "com.aft.foodordering",
+      "package": "com.aft.foodie",
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/images/android-icon-foreground.png",
